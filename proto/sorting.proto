@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package sorting;
+
+service Sorting{
+    rpc Sort (SortRequest) returns (SortResponse);
+}
+
+message SortRequest {
+    repeated int32 numbers = 1;
+}
+
+message SortResponse {
+    repeated int32 numbers = 1;
+}
