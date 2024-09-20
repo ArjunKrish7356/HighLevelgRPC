@@ -30,12 +30,14 @@ You start by creating a .proto file where you describe your service (e.g., Sorti
 
 ## Generate Code:
 The protoc compiler takes your .proto file and generates code for both the server and the client. This code handles the complexities of converting your messages to a format that can be sent over the network.
+
 In Rust, you'll typically get:
-sorting_server.rs: Contains an abstract Sorting trait and a SortingServer helper.
-sorting_client.rs: Contains a SortingClient for making requests.
+- sorting_server.rs: Contains an abstract Sorting trait and a SortingServer helper.
+- sorting_client.rs: Contains a SortingClient for making requests.
 
 ## Implement the Server:
 You create a SortService struct in your Rust server code.
+
 You implement the Sorting trait for your SortService, providing the actual logic for the sort function defined in your .proto file. This is where you'll put your sorting algorithm.
 
 ## Create the Server:
